@@ -13,9 +13,8 @@ usage = (
 Return a function in the domain [-5.0, 5.0] whose form depends on the argument given as an input:
 
     1     f(x) = x
-    2     f(x) = x**2
-    3     f(x) = x**3
-    4     f(x) = tan(x)'''
+    2     f(x) = exp(x)
+    3     f(x) = sqrt(|x|) '''
 )
 
 if len(sys.argv) < 2:
@@ -25,6 +24,16 @@ else:
     for i in xval:    
         if sys.argv[1] == "1":
             yval.append(i)
-  
+
+        elif sys.argv[1] == "2":
+            yval.append(np.exp(i))
+
+        elif sys.argv[1] == "3":
+            yval.append(np.sqrt(np.abs(i)))
+
+        else:
+            print("Unknown argument.\n", usage)
+            sys.exit()
+            
     plt.plot(xval, yval)
     plt.show()
