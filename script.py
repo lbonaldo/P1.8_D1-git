@@ -17,7 +17,9 @@ Return a function in the domain [-3.0, 3.0] whose form depends on the argument g
     3     f(x) = x**3
     4     f(x) = sin(x)
     5     f(x) = cos(x)
-    6     f(x) = tan(x)'''
+    6     f(x) = tan(x)
+    7     f(x) = exp(x)
+    8     f(x) = sqrt(|x|) '''
 )
 
 if len(sys.argv) < 2:
@@ -43,5 +45,15 @@ else:
         elif sys.argv[1] == "6":
             yval.append(np.tan(i))
   
+        elif sys.argv[1] == "7":
+            yval.append(np.exp(i))
+
+        elif sys.argv[1] == "8":
+            yval.append(np.sqrt(np.abs(i)))
+
+        else:
+            print("Unknown argument.\n", usage)
+            sys.exit()
+            
     plt.plot(xval, yval)
     plt.show()
