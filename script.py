@@ -4,13 +4,13 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
-xval = [i for i in np.arange(-5.0, 5.1, 0.1) if round(i, 1) != 0.1]
+xval = [i for i in np.arange(-3.0, 3.1, 0.1) if round(i, 1) != 0.1]
 
 yval = []
 
 usage = (
     '''Usage: script.py [FUNCTION FORM]
-Return a function in the domain [-5.0, 5.0] whose form depends on the argument given as an input:
+Return a function in the domain [-3.0, 3.0] whose form depends on the argument given as an input:
 
     1     f(x) = x
     2     f(x) = exp(x)
