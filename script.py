@@ -34,7 +34,7 @@ else:
         elif sys.argv[1] == "3":
             yval.append(i**3)
 
-        elif sys.argv[1] == "4"
+        elif sys.argv[1] == "4":
             yval.append(np.sin(i))
 
         elif sys.argv[1] == "5":
