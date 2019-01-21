@@ -14,7 +14,10 @@ Return a function in the domain [-3.0, 3.0] whose form depends on the argument g
 
     1     f(x) = x
     2     f(x) = x**2
-    3     f(x) = x**3'''
+    3     f(x) = x**3
+    4     f(x) = sin(x)
+    5     f(x) = cos(x)
+    6     f(x) = tan(x)'''
 )
 
 if len(sys.argv) < 2:
@@ -30,6 +33,15 @@ else:
 
         elif sys.argv[1] == "3":
             yval.append(i**3)
+
+        elif sys.argv[1] == "4"
+            yval.append(np.sin(i))
+
+        elif sys.argv[1] == "5":
+            yval.append(np.cos(i))
+
+        elif sys.argv[1] == "6":
+            yval.append(np.tan(i))
   
     plt.plot(xval, yval)
     plt.show()
